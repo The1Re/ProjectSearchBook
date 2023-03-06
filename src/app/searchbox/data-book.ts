@@ -1,3 +1,5 @@
+import { typedata } from './interfacedata'
+
 export const databook = [
     {
         name: 'จัดการฐานข้อมูลด้วย MySQL + MariaDB',

@@ -4,33 +4,33 @@
         <div class="searchbox">
             <div class="inputbox">
                 <span class="details">ชื่อ</span>
-                <input type="text">
+                <input #name type="text">
             </div>
             <div class="inputbox">
                 <span class="details">หมวดหมู่</span>
-                <input type="text">
+                <input #catagory type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ผู้แต่ง</span>
-                <input type="text">
+                <input #credit type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ราคา</span>
-                <input type="text">
+                <input #price type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ผู้ยืม</span>
-                <input type="text">
+                <input #borrower type="text">
             </div>
             <div class="inputbox">
                 <span class="details">วันที่ยืม</span>
-                <input type="text">
+                <input #date type="text">
             </div>
         </div>
     </form>
     <div class="footer">
-        <button type="button" class="searchbtn">ค้นหา</button>
-        <button type="button" class="cancelbtn">ยกเลิก</button>
+        <button type="button" class="searchbtn" (click)="searchbook(name.value,catagory.value,credit.value,price.value,borrower.value,date.value)">ค้นหา</button>
+        <button type="button" class="cancelbtn" (click)="resetdata()">ยกเลิก</button>
     </div>
 </div>
 <div class="footbtn">
@@ -50,7 +50,7 @@
             <th>วันที่ยืม</th>
         </thead>
         <tbody>
-            <tr *ngFor="let data of booklist">
+            <tr *ngFor="let data of filterData">
                 <td></td>
                 <td>{{ data.name }}</td>
                 <td>{{ data.category }}</td>
