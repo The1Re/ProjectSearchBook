@@ -4,32 +4,32 @@
         <div class="searchbox">
             <div class="inputbox">
                 <span class="details">ชื่อ</span>
-                <input type="text">
+                <input #name type="text">
             </div>
             <div class="inputbox">
                 <span class="details">หมวดหมู่</span>
-                <input type="text">
+                <input #catagory type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ผู้แต่ง</span>
-                <input type="text">
+                <input #credit type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ราคา</span>
-                <input type="text">
+                <input #price type="text">
             </div>
             <div class="inputbox">
                 <span class="details">ผู้ยืม</span>
-                <input type="text">
+                <input #borrower type="text">
             </div>
             <div class="inputbox">
                 <span class="details">วันที่ยืม</span>
-                <input type="text">
+                <input #date type="text">
             </div>
         </div>
     </form>
     <div class="footer">
-        <button type="button" class="searchbtn">เพิ่ม</button>
+        <button type="button" class="searchbtn" (click)="addData(name.value,catagory.value,credit.value,price.value,borrower.value,date.value)">เพิ่ม</button>
         <button type="button" class="cancelbtn" routerLink="">ยกเลิก</button>
     </div>
 </div>
