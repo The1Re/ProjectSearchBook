@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="title">ค้นหาหนังสือ</div>
+    <form action="#">
+        <div class="searchbox">
+            <div class="inputbox">
+                <span class="details">ชื่อ</span>
+                <input type="text">
+            </div>
+            <div class="inputbox">
+                <span class="details">หมวดหมู่</span>
+                <input type="text">
+            </div>
+            <div class="inputbox">
+                <span class="details">ผู้แต่ง</span>
+                <input type="text">
+            </div>
+            <div class="inputbox">
+                <span class="details">ราคา</span>
+                <input type="text">
+            </div>
+            <div class="inputbox">
+                <span class="details">ผู้ยืม</span>
+                <input type="text">
+            </div>
+            <div class="inputbox">
+                <span class="details">วันที่ยืม</span>
+                <input type="text">
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <button type="button" class="searchbtn">ค้นหา</button>
+        <button type="button" class="cancelbtn">ยกเลิก</button>
+    </div>
+</div>
+<div class="footbtn">
+    <button type="button" class="more" routerLink="/addbox">เพิ่มเติม</button>
+</div>
+
+
+<div class="table">
+    <table class="table">
+        <thead>
+            <th>ชื่อหนังสือ</th>
+            <th>หมวดหมู่</th>
+            <th>ผู้แต่ง</th>
+            <th>ราคา</th>
+            <th>ผู้ยืม</th>
+            <th>วันที่ยืม</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of booklist">
+                <td>{{ data.name }}</td>
+                <td>{{ data.category }}</td>
+                <td>{{ data.credit }}</td>
+                <td>{{ data.price }}</td>
+                <td>{{ data.borrower }}</td>
+                <td>{{ data.date }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
