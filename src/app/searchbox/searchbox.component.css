@@ -1,19 +1,20 @@
+
 .container{
-    margin: auto;
-    margin-top: 10%;
-    max-width: 600px;
-    width: 100%;
-    padding: 25px 30px;
-    border-radius: 25px;
+    position: static;
+    margin: 100px auto auto;
     border: solid 2px black;
+    border-radius: 20px;
+    max-width: 700px;
 }
-.container .title{
-    font-size: 25px;
-    font-weight: 500;
+
+.title{
     position: relative;
-    text-align: left;
-    padding: 0 0 20px 0;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
+
 .container form .searchbox{
     margin-top: 10px;
     margin-left: 25px;
@@ -29,9 +30,10 @@ form .searchbox .inputbox{
 .inputbox input{
     width: 100%;
 }
+
 .container .footer{
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .container .footer .searchbtn{
     position: absolute;
@@ -50,12 +52,14 @@ form .searchbox .inputbox{
     background-color: #717A83
 }
 .footbtn{
-    position: relative;
+    position: static;
+    margin: auto;
+    max-width: 700px;
 }
 .footbtn .more{
-    position: absolute;
-    margin-top: 20px;
-    right: 10px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 84%;
     width: 15%;
     border-radius: 5px;
     color: #D8E8F7;
@@ -63,18 +67,16 @@ form .searchbox .inputbox{
 }
 
 
-
-
 table{
-    margin-top: 70px;
-    margin-left: auto;
-    max-width: 700px;
+    position: static;
+    margin: 50px auto 150px;
+    max-width: 1000px;
 }
 table,th,td{
-    border:1px solid black;
+    border: solid 1px black;  
     border-collapse: collapse;
 }
-thead th{
+thead th,#number{
     text-align: center;
 }
 th,tr td{

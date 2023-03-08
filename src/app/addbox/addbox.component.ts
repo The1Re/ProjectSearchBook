@@ -12,6 +12,7 @@ export class AddboxComponent {
 
   addData(name:string,category:string,credit:string,price:string,borrower:string,date:string){
     this.booklist.push({
+      number:this.booklist.length+1,
       name:name,
       category:category,
       credit:credit,

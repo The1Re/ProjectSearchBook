@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output,ViewChild ,ElementRef } from '@angular/core';
 import { EnabledBlockingInitialNavigationFeature } from '@angular/router';
 import { concatAll } from 'rxjs';
 import { databook } from './data-book'
@@ -18,7 +18,7 @@ export class SearchboxComponent {
   resetdata():void{
     this.filterData = this.booklist;
   }
-
+  
   searchbook(name:string,category:string,credit:string,price:string,borrower:string,date:string){
     var dataname:typedata[] = [];
     var datacatagory:typedata[] = [];
@@ -74,6 +74,7 @@ export class SearchboxComponent {
       this.resetdata();
     }else{
       this.filterData = this.temp.concat(dataname,datacatagory,datacredit,dataprice,databorrower,datadate);
+      this.filterData = this.filterData.filter((item,index)=>this.filterData.indexOf(item) === index)
     }
   }
 }
