@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddboxComponent } from './addbox/addbox.component';
-import { AppComponent } from './app.component';
 import { SearchboxComponent } from './searchbox/searchbox.component';
 
 const routes: Routes = [

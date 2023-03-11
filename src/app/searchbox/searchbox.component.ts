@@ -1,6 +1,6 @@
 import { Component, Output,ViewChild ,ElementRef } from '@angular/core';
 import { EnabledBlockingInitialNavigationFeature } from '@angular/router';
-import { concatAll } from 'rxjs';
+import { concatAll, filter } from 'rxjs';
 import { databook } from './data-book'
 import { typedata } from './interfacedata'
 
